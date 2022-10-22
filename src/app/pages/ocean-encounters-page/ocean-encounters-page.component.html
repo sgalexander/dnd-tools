@@ -1,0 +1,18 @@
+<dnd-header pageName="Ocean Encounters"></dnd-header>
+<content>
+    <p>
+        Here, you'll find a generator for random ocean encounters. It will roll several dice, and those rolls will generate an outcome on a number of tables.
+    </p>
+    <div>
+        Roll with:
+        <select>
+            <option value="">No Advantage</option>
+            <option value="adv">Advantage</option>
+            <option value="dis">Disadvantage</option>
+        </select>
+        <select>
+            <option *ngFor="let number of numbers;" value="number">{{number}} {{ number > 1 ? 'Encounters' : 'Encounter'}}</option>
+        </select>
+        <button>Generate encounter</button>
+    </div>
+</content>
