@@ -3,16 +3,27 @@
     <p>
         Here, you'll find a generator for random ocean encounters. It will roll several dice, and those rolls will generate an outcome on a number of tables.
     </p>
-    <div>
+    <p>
+        If you see it mention a Villain, you can use one of your campaign villains (or their underlings). This tool has three "groups" of villains, and assumes your BBEG is an overarching one for your campaign with layers of underlings.
+    </p>
+    <p>
+        The "lucky" encounter table is intended to be adventure hooks and sidequests.
+    </p>
+    <form [formGroup]="encounterForm" (ngSubmit)="generateEncounters()">
         Roll with:
-        <select>
-            <option value="">No Advantage</option>
+        <select formControlName="advantageType">
+            <option value="no">No Advantage</option>
             <option value="adv">Advantage</option>
             <option value="dis">Disadvantage</option>
         </select>
-        <select>
-            <option *ngFor="let number of numbers;" value="number">{{number}} {{ number > 1 ? 'Encounters' : 'Encounter'}}</option>
+        <select formControlName="numberOfEncounters">
+            <option *ngFor="let number of numbers;" [value]="number">{{number}} {{ number > 1 ? 'Encounters' : 'Encounter'}}</option>
         </select>
-        <button>Generate encounter</button>
+        <button type="submit">Generate encounter</button>
+    </form>
+    <div *ngFor="let encounter of encounters">
+        <div>{{encounter.roll}} -- {{encounter.encounter_type}}</div>
+        <p>{{encounter.description}}</p>
+        <p>{{encounter.dm_description}}</p>
     </div>
 </content>

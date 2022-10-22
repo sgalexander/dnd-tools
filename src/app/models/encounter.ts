@@ -1,6 +1,13 @@
 export interface Encounter {
-    short_description: string;
+    description: string;
     dm_description: string;
-    encounter_text: string;
-    id: number;
+    roll?: number;
+    encounter_type?: EncounterTypes;
+}
+
+export enum EncounterTypes {
+    low = "low",
+    medium = "medium",
+    high = "high",
+    lucky = "lucky"
 }
