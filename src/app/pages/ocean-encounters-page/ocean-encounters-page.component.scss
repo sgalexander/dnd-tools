@@ -1,0 +1,22 @@
+p {
+    margin-bottom: 16px;
+}
+
+.ocean-encounters__encounter {
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.ocean-encounters__encounter-description{
+    margin-bottom: 0px;
+}
+
+.ocean-encounters__encounter-title{
+    margin: -8px -8px 8px;
+    padding: 4px 8px;
+    background-color: crimson;
+    color: white;
+}

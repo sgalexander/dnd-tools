@@ -211,7 +211,7 @@ const high_encounters: Encounter[] = [
     },
     {
       "description": "A storm giant rises from the water, demanding tribute",
-      "dm_description": "Either surrender 1 die size of luxuries, or the Storm Giant will board the ship, and demand a feast (1 die of grog and food). If not provided one, he will attack and attempt to cripple the vessel before leaping back into the sea."
+      "dm_description": "The Storm Giant will board the ship, and demand a feast (1 die of grog and food). If not provided one, he will attack and attempt to cripple the vessel before leaping back into the sea."
     },
     {
       "description": "A Lieutenant of Villain A",

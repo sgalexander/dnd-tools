@@ -1,0 +1,15 @@
+.app {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.app__header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 8px;
+}
+
+.app__router-outlet-wrapper {
+    grid-column-start: 2;
+}
+

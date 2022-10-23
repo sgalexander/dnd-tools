@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ENCOUNTERS } from 'src/app/data/encounters';
 import { Encounter, EncounterTypes } from 'src/app/models/encounter';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'dnd-ocean-encounters-page',
@@ -18,10 +19,11 @@ export class OceanEncountersPageComponent implements OnInit {
   encounters: Encounter[] = [];
 
   constructor(
+    private headerService: HeaderService
   ) { }
 
   ngOnInit(): void {
-
+    this.headerService.updateHeaderText('D&D Tools: Ocean Encounters');
   }
 
   generateEncounters() {

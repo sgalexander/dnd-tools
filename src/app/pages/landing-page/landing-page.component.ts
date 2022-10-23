@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'dnd-landing-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private headerService: HeaderService
+  ) { }
 
   ngOnInit(): void {
+    this.headerService.updateHeaderText('Dungeons and Dragons Tools');
   }
 
 }

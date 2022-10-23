@@ -1,4 +1,3 @@
-<dnd-header pageName="Ocean Encounters"></dnd-header>
 <content>
     <p>
         Here, you'll find a generator for random ocean encounters. It will roll several dice, and those rolls will generate an outcome on a number of tables.
@@ -21,9 +20,9 @@
         </select>
         <button type="submit">Generate encounter</button>
     </form>
-    <div *ngFor="let encounter of encounters">
-        <div>{{encounter.roll}} -- {{encounter.encounter_type}}</div>
-        <p>{{encounter.description}}</p>
-        <p>{{encounter.dm_description}}</p>
+    <div class="ocean-encounters__encounter" *ngFor="let encounter of encounters; index as i">
+        <div class="ocean-encounters__encounter-title">#{{i}}: {{encounter.description}}</div>
+        <div class="ocean-encounters__encounter-subtitle">Roll: {{encounter.roll}} -- {{encounter.encounter_type}} difficulty encounter</div>
+        <p class="ocean-encounters__encounter-description">{{encounter.dm_description}}</p>
     </div>
 </content>

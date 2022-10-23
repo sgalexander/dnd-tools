@@ -1,0 +1,13 @@
+.header {
+    background-color: crimson;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+}
+
+.header__center-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
